@@ -1,0 +1,675 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 2005px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.mainWrapper {
+    width: 100%;
+    height: 2005px;
+    display: grid;
+    grid-template-columns: 
+    [line1] 4% [line2] 15% [line3] 16% [line4] 16% [line5] 16%[line6] 15% [line7] 15% [line8] 4% [end];
+    grid-template-rows: 
+    [line-1] 100px [line-2] 60px [line-3] 100px [line-4] 350px [line-5] 300px [line-6] 100px [line-7] 100px [line-8] 100px [line-9] 100px [line-10] 100px [line-11] 300px [line-12] 100px [line-13] 300px [end];
+    grid-row-gap: 15px;
+}
+/* .header {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    grid-column: 1 / span 5;
+    grid-row: 1 / 1;
+    z-index: 3;
+} */
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+li {
+    display: inline-block;
+    padding: 20px;
+}
+.logo {
+    width: 100%;
+    height: 120px;
+    display: inline-block;
+    grid-column: 2 / span 2;
+    grid-row: 1;
+    z-index: 3;
+    margin-top: 20px;
+}
+.nav {
+    font-family: 40px;
+    color: white;
+    display: inline-block;
+    justify-self: end;
+    grid-column: 4 / span 4;
+    grid-row: 1;
+    z-index: 3;
+}
+.hamBtn {
+    display: none;
+    width: 50px;
+    height: 60px;
+    grid-column: 7;
+    grid-row: 1;
+    z-index: 5;
+    justify-self: center;
+    align-self: center;
+}
+.hamBar {
+    width: 50px;
+    height: 7px;
+    margin: 3px;
+    background-color: white;
+    border-radius: 20px;
+}
+.notices {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(255, 0, 0, 0.7);
+    grid-column: 1 / span 8;
+    grid-row: 2;
+    z-index: 3;
+}
+.noticeInfo {
+    grid-column: 1 / span 8;
+    grid-row: 2;
+    justify-self: center;
+    z-index: 4;
+    text-align: center;
+    line-height: 5px;
+    padding-top: 10px;
+}
+.hero {
+    width: 100%;
+    height: 600px;
+    background-color: grey;
+    grid-column: 1 / span 8;
+    grid-row: 1 / 2;
+    background-image: url('campPhotos/campPhoto_1.jpg');
+    background-size: cover;
+    background-repeat: none;
+}
+.headline {
+    width: 300px;
+    height: 250px;
+    grid-column: 6;
+    grid-row: 4;
+    z-index: 4;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    color: white;
+}
+#best {
+    font-weight: bold;
+    font-size: 80px;
+}
+.applyBox {
+    grid-column: 2 / span 2;
+    grid-row: 5;
+    margin: 0 auto;
+    background-image: url('campPhotos/campPhoto_2volunteer.jpg');
+    background-size: cover;
+    background-position: -300px 0px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+.volunteerBox {
+    background-image: url('campPhotos/campPhoto_3.jpg');
+    background-size: cover;
+    grid-column: 4 / span 2;
+    grid-row: 5;
+    margin: 0 auto; 
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+}
+.donateBox {
+    grid-column: 6 / span 2;
+    grid-row: 5;
+    margin: 0 auto;
+    background-image: url('campPhotos/campPhoto_4.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}
+.applyBox, .volunteerBox, .donateBox {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 300px;
+    background-color: rgb(51, 51, 51);
+}
+.applyBox :hover, .volunteerBox :hover, .donateBox :hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
+}
+.accordian {
+    display: none;
+}
+.howToApply {
+    width: 900px;
+    height: 250px;
+    background-color: lightgreen;
+    margin-top: 10px;
+}
+.findACamp {
+    width: 900px;
+    height: 250px;
+    background-color: lightgreen;
+    margin-top: 10px;
+}
+.stats {
+    width: 900px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-top: 10px;
+}
+.activityHeader {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    grid-column: 1 / span 8;
+    grid-row: 6;
+    justify-self: center;
+    text-align: center;
+    line-height: 100px;
+}
+.activities {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;  
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2)  
+}
+.activity1 {
+    width: 145px;
+    height: 100px;
+    grid-column: 2;
+    grid-row: 7;
+    justify-self: end;
+    background-image: url('myCampPhotos/camper_couselor_2.jpg');
+    background-size: cover;
+    background-repeat: none;
+    line-height: 100px;
+
+}
+.activity2 {
+    width: 145px;
+    height: 215px;
+    grid-column: 2;
+    grid-row: 8 / span 2;
+    justify-self: end;
+    background-image: url('myCampPhotos/campers_1.jpg');
+    background-size: cover;
+    background-repeat: none;
+    line-height: 215px;
+}
+.activity3 {
+    width: 150px;
+    height: 215px;
+    grid-column: 3;
+    grid-row: 7 / span 2;
+    justify-self: center;
+    margin-left: 22.5px;
+    background-image: url('myCampPhotos/campers_2.jpg');
+    background-size: cover;
+    background-repeat: none;
+    line-height: 215px;
+
+}
+.activity4 {
+    width: 150px;
+    height: 100px;
+    grid-column: 3;
+    grid-row: 9;
+    justify-self: center;
+    margin-left: 22.5px;
+    background-image: url('myCampPhotos/campers_3.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 0px -60px;
+    line-height: 100px;
+}
+.activity5 {
+    width: 150px;
+    height: 330px;
+    grid-column: 4;
+    grid-row: 7 / span 3;
+    justify-self: center;
+    background-image: url('myCampPhotos/campers_4.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: -40px 0px;
+    line-height: 330px;
+
+}
+.activity6 {
+    width: 150px;
+    height: 100px;
+    grid-column: 5;
+    grid-row: 7;
+    justify-self: center;
+    background-image: url('myCampPhotos/camp_5.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 0px -60px;
+    line-height: 100px;
+}
+.activity7 {
+    width: 150px;
+    height: 215px;
+    grid-column: 5;
+    grid-row: 8 / span 2;
+    justify-self: center;
+    background-image: url('myCampPhotos/camp_6.jpg');
+    background-size: cover;
+    background-repeat: none;
+    line-height: 215px;
+
+}
+.activity8 {
+    width: 150px;
+    height: 215px;
+    grid-column: 6;
+    grid-row: 7 / span 2;
+    justify-self: center;
+    margin-right: 22.5px;
+    background-image: url('myCampPhotos/camp_7.jpg');
+    background-size: cover;
+    background-repeat: none;
+    line-height: 215px;
+
+}
+.activity9 {
+    width: 150px;
+    height: 100px;
+    grid-column: 6;
+    grid-row: 9;
+    justify-self: center;
+    margin-right: 22.5px;
+    background-image: url('myCampPhotos/camperCabins.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 0px -60px;
+    line-height: 100px;
+}
+.activity10 {
+    width: 150px;
+    height: 330px;
+    grid-column: 7;
+    grid-row: 7 / span 3;
+    justify-self: start;
+    background-image: url('campPhotos/campPhoto_2volunteer.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: 200px 0px;
+    line-height: 330px;
+} 
+.activities:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
+}
+.testimonial1, .testimonial2, .testimonial3 {
+    width: 320px;
+    height: 300px;
+    display: inline-block;
+}
+.testimonialSection {
+    grid-column: 1/ span 8;
+    grid-row: 10 / span 2;
+    background-color: rgba(247, 212, 56, 0.267);
+}
+.testimonialHeader {
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    grid-column: 1 / span 8;
+    grid-row: 10;
+    justify-self: center;
+    text-align: center;
+    line-height: 100px;
+    z-index: 3;
+}
+.testimonial1 {
+    grid-column: 2 / span 2;
+    grid-row: 11;
+    margin: 0 auto;
+}
+.testimonial2 {
+    grid-column: 4 / span 2;
+    grid-row: 11;
+    margin: 0 auto;
+}
+.testimonial3 {
+    grid-column: 6 / span 2;
+    grid-row: 11;
+    margin: 0 auto;
+}
+.testImage {
+    width: 150px;
+    height: 200px;
+    background-color: grey;
+    display: inline-block;
+
+}
+.donateBtn {
+    width: 200px;
+    height: 75px;
+    border-radius: 35px;
+    font-size: 30px;
+    background-color: darkblue;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 75px;
+    grid-column: 4 / span 2;
+    grid-row: 12;
+}
+.loadBtn {
+    background-color: grey;
+    display: none;
+}
+.footer {
+    width: 100%;
+    height: 100%;
+    background-color: darkblue;
+    grid-column: 1 / span 8;
+    grid-row: 13;
+}
+.footerContent {
+    grid-column: 2 / span 2;
+    grid-row: 13;
+    justify-self: center;
+}
+.footerLinks {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.footerLinks :hover {
+    color: gold;
+}
+.linkedWord {
+    margin-right: 10px;
+}
+.officialCopy {
+    font-size: 15px;
+    color: white;
+    line-height: 10px;
+}
+.cta:hover{
+    color: gold;
+}
+.logo2 {
+    width: 150px;
+    height: auto;
+}
+.newsletter {
+    grid-column: 7;
+    grid-row: 13;
+    align-self: center;
+}
+.newsletterHeader {
+    color: white;
+    font-size: 15px;
+}
+input {
+    display: block;
+    margin-top: 10px;
+
+}
+.inputBox {
+    width: 200px;
+}
+.copyrightLine {
+    grid-column: 1 / span 8;
+    grid-row: 13;
+    justify-self: center;
+    color: white;
+    font-size: 10px;
+    line-height: 8px;
+    align-self: end;
+    text-align: center;
+}
+#bold {
+    font-weight: bold;
+}
+.img1 {
+    background-image: url('myCampPhotos/counselors_1.jpg');
+    background-repeat: none;
+    background-size: 200%;
+    background-position: 0px -50px;
+}
+.img2 {
+    background-image: url('myCampPhotos/flashback_2.jpg');
+    background-repeat: none;
+    background-size: 400%;
+    background-position: -20px -70px;
+
+}
+.img3 {
+    background-image: url('myCampPhotos/flashback_2.jpg');
+    background-repeat: none;
+    background-size: 400%;
+    background-position: 170px -60px;
+
+}
+.copySection {
+    float: right;
+    display: inline-block;
+    width: 160px;
+    /* word-break: break-word; */
+
+}
+.p2 {
+    position: relative;
+    top: -10px;
+}
+.names {
+    position: relative;
+    top: -20px;
+    font-weight: bold;
+    left: 40px;
+}
+.bre {
+    top: 0px;
+}
+
+
+@media only screen and (max-width: 1080px) {
+    body {
+        display: flex;
+    }
+    .mainWrapper {
+        display: grid;
+
+        grid-template-columns: 
+        [line1] 5% [line2] 90% [line3] 5% [end];
+        grid-template-rows: 
+        [line-1] 100px [line-2] 60px [line-3] 100px [line-4] 350px [line-5] 300px [line-6] 300px [line-7] 300px [line-8] 100px [line-9] 300px [line-10] 300px [line-11] 300px [line-12] 50px [line-13] 100px [line-14] 250px [line-15] 50px [line-16] 100px [line-17] 300px [end];
+    }
+    .logo {
+        display: grid;
+        grid-column: 2;
+        grid-row: 1;
+        width: 50%;
+        height: 100%;
+        padding-top: 10px;
+    }
+    .nav {
+        display: none;
+    }
+    .hamBtn {
+        display: grid;
+        grid-column: 2;
+        justify-self: end;
+        align-self: start;
+        height: 10px;
+        margin-top: 25px;
+    }
+    .notices {
+        display: grid;
+        grid-column: 1 / span 3;
+        width: 110%;
+        justify-content: center;
+        height: 120px;
+    }
+    .noticeInfo {
+        grid-column: 1 / span 3;
+        justify-content: center;
+        line-height: 15px;
+    }
+    .hero {
+        display: flex;
+        width: 110%;
+        height: 600px;
+    }
+    .headline {
+        grid-column: 2;
+        text-align: center;
+    }
+    #best {
+        text-align: center;
+    }
+    .applyBox {
+        grid-column: 2;
+        grid-row: 5;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+    }
+    .volunteerBox {
+        grid-column: 2;
+        grid-row: 6;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+    }
+    .donateBox {
+        grid-column: 2;
+        grid-row: 7;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+    }
+    .activityHeader {
+        grid-column: 2;
+        grid-row: 8;
+    }
+    .activities {
+        display: none;
+    }
+    .activity1 {
+        display: grid;
+        grid-column: 2;
+        grid-row: 9;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .activity2 {
+        display: grid;
+        grid-column: 2;
+        grid-row: 10;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .activity3 {
+        display: grid;
+        grid-column: 2;
+        grid-row: 11;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+    .loadBtn {
+        display: grid;
+    }
+    .loadActivities {
+        grid-column: 2;
+        grid-row: 12;
+    }
+    .testimonialHeader {
+        grid-column: 2;
+        grid-row: 13;
+    }
+    .testImage {
+        grid-column: 2;
+        grid-row: 14;
+    }
+    .testimonial1 {
+        grid-column: 2;
+        grid-row: 14;
+        width: 100%;
+        height: 100%;
+    }
+    .copySection {
+        width: 250px;
+    }
+    .testimonial2 {
+        display: none;
+    }
+    .testimonial3 {
+        display: none;
+    }
+    .loadTestimonials {
+        grid-column: 2;
+        grid-row: 15;
+    }
+    .donateBtn {
+        grid-column: 2;
+        grid-row: 16;
+        justify-self: center;
+    }
+    .footer {
+        grid-row: 17;
+    }
+    .footerContent {
+        grid-row: 17;
+    }
+
+}
+@media only screen and (min-width: 600px) and (max-width: 1080px) {
+    .logo {
+        width: 50%;
+        height: 100%;
+        justify-self: start;
+    }
+    .applyBox {
+        width: 50%;
+        height: 100%;
+        justify-self: center;
+    }
+    .volunteerBox {
+        width: 50%;
+        height: 100%;
+        justify-self: center;
+    }
+    .donateBox {
+        width: 50%;
+        height: 100%;
+        justify-self: center;
+    }
+    .testImage {
+        width: 33%;
+        height: 100%;
+    }
+
+}
